@@ -8,10 +8,12 @@ public class Quest1 {
             System.out.print("Digite o " + (i+1) + "º número inteiro: ");
             num[i] = scanner.nextInt();
         }
-        System.out.println("---- Ordem inversa das respostas ----");
-        for (int i = 4; i >= 0; i--){
-            System.out.println((i + 1) + "º numero: " + num[i]);
+        System.out.println("---- números digitados ----");
+        System.out.print("[ ");
+        for (int i = 0; i < 5; i++){
+            System.out.print(num[i] + " ");
         }
+        System.out.print("]");
         scanner.close();
     }
 }

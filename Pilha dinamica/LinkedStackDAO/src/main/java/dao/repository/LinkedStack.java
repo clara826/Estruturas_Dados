@@ -1,3 +1,4 @@
+package Git2;
 import java.util.NoSuchElementException;
 
 /**
@@ -81,21 +82,24 @@ public class LinkedStack<T> implements Stackable<T> {
      * @return retorna elemento do topo da pilha
      * @throws  NoSuchElementException , quando a pilha esta cheia.
      */
-   @Override
+    @Override
     public push(T Data){
-       if(isEmpty()) {
-           throw new NoSuchElementException("Stack is full!");
-       }
-       DoubleNode<T> newNote = new DoubleNode<>();
-       newNode.setData(data);
-       topPointer.setNext(newNode);
-       newNode.setPrevious(topPoiner);
-       topPoiner = newNote;
-       numberElements++;
+        if(isEmpty()) {
+            throw new NoSuchElementException("Stack is full!");
+        }
+        DoubleNode<T> newNote = new DoubleNode<>();
+        newNode.setData(data);
+        topPointer.setNext(newNode);
+        newNode.setPrevious(topPoiner);
+        topPoiner = newNote;
+        numberElements++;
     }
     @Override
     public void update(T newData){
-
+        if(isEmpty()) {
+            throw new NoSuchElementException("Stack is empty!");
+        }
+        topPointer.setData(newData);
     }
     /**
      * Imprime elementos da pilha

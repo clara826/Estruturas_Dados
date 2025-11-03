@@ -94,6 +94,11 @@ public class LinkedStack<T> implements Stackable<T> {
         topPoiner = newNote;
         numberElements++;
     }
+    /**
+     * Atualiza a pilha
+     *
+     * @return
+     */
     @Override
     public void update(T newData){
         if(isEmpty()) {
